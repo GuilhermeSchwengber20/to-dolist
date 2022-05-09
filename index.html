@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a6d35837fd.js" crossorigin="anonymous"></script>
+    <title>TO-DO LIST Guilherme</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>TO-DO LIST</h1>
+    <div class="container-principal">
+        <div class="topo">
+            <input type="text" placeholder="Adicionar nova tarefa" id="inputNovaTarefa">
+            <button id="btnAdicionarTarefa">
+                <i class="fa fa-plus"></i>
+
+            </button>
+        </div>
+        <div class="container-tarefa">
+            <ul id="listaTarefas">
+            </ul>
+        </div>
+
+    </div>
+    <div id ="janelaEdicao">
+        <button id ="janelaEdicaoBtnFechar">
+            <i class="fa fa-remove "></i>
+        </button>
+        <h2 id="idTarefaEdicao">#1020</h2>
+        <hr>
+        <form>
+            <div class="frm-linha">
+                <label for="nome">Nome</label>
+                <input type="text" id="inputTarefaNomeEdicao">
+            </div>
+            <div class="frm-linha">
+                <button id="btnAtualizarTarefa">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <div id="janelaEdicaoFundo"></div>
+
+
+</body>
+</html>
