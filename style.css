@@ -1,186 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
 body{
     padding: 0;
     margin: 0;
     background-image: linear-gradient(to top right,#0091ff, #00ff9d);
     background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Readex Pro', sans-serif;
     background-attachment: fixed;
 }
 
-
-h1{
-    color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-div{
-    display: block;
-}
-
-.container-principal{
-    width: 100%;
-    max-width: 415px;
-    border: 2px solid #FFF;
-    padding: 30px;
+.containerPrincipal{
+    border-radius: 10px;
     margin: auto;
+    margin-top: 90px;
+    width: 400px;
+    background-color: #383b42;  
+    height: auto;
 }
 
-.topo{
+.headerContainer{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 35px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
 }
-
-
-.topo input{
-    width: 350px;
-    padding: 15px;
-    border-radius: 12px;
-    outline: none;
+.bodyContainer{
+    padding: 10px;
+}
+#inputNovaTarefa{
+    width: 80%;
+    padding: 3px;
+    background-color:#464A53;
     border: none;
-    font-size: 1.2rem;
+    outline: none;
+    font-family: 'Readex Pro', sans-serif;
+    border-radius: 8px;
+    height: 25px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
 }
 
-.topo button{
+.line select {
+    width: 100px;
+    text-align: right;
+    padding: 3px;
+    background-color:#464A53;
+    border: none;
+    outline: none;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    color: #FFF;
+}
+
+.line input[type="date"]{
+    width: 120px;
+    text-align: right;
+    padding: 3px;
+    background-color:#464A53;
+    border: none;
+    outline: none;
+    font-family: 'Readex Pro', sans-serif;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.line span{
+    color: #FFF
+}
+
+.line textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: "Readex Pro", sans-serif;
+    outline: none;
+    border-radius: 10px;
+    background-color: #464A53;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+#addTaskContainer{
+    display: none;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    background-color: #383b42;  
+    border-radius: 10px;
+}
+
+#addTaskContainer.abrir{
+    display: flex;
+    flex-direction: column;
+}
+
+#addTaskContainer button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+#btnAdicionarTarefa i{
+    color: #FFF;
+    font-size: 18px;
+}
+
+.containerTarefa{
+    padding: 10px;
+}
+
+#newTask{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
     margin-left: 10px;
-    width: 60px;
-    border-radius: 25px;
-
-    border:none;
-    background-color: #FFF;
 }
 
-.topo button:hover{
-    background-image: linear-gradient(to top right,#0091ff, #00ff9d);
+#newTask i{
+    color: #FFF;
+}
+
+#newTask:hover
+#newTask i:hover{
+    color: #cecece;
+    cursor: pointer;
 }
 
 
 #listaTarefas{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 #listaTarefas li{
-    padding: 20px;
+    list-style: none;
+    font-size: 18px;
+    font-family: "Readex Pro", sans-serif;
+    margin-top: 10px;
+    color: #FFF;
+}
+
+
+
+.textTask{
+    margin-top: 10px;
+}
+
+.flexRow{
     display: flex;
-    background: #FFF;
-    border-radius: 12px;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
+    gap: 10px;
 }
 
-.btnAcao{
-    border-radius: 20px;
-    border: 1px solid #00ff9d;
-    width: 38px;
-    height: 38px;
-    margin-right: 12px;
-    cursor: pointer;
-    background: #FFF;
-    color: white;
+#btnSalvar{
+    display: none;
 }
-i{
-    color: black;
+#btnSalvar i{
+    color: #00ff9d;
+    font-size: 18px;
 }
 
-.btnAcao:hover{
+.containerButtons{
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.containerButtons button{
+    width: 50%;
+    padding: 5px;
+    border-radius: 8px;
+    outline: none;
     border: none;
 
+}  
+
+.containerButtons button:nth-child(1){
+    background-color: #fc9a9d;
+    color: #ff292f;
+    font-weight: 700;
+    font-family: "Readex Pro", sans-serif;
+}
+.containerButtons button:nth-child(2){
+    background-color: #6ff776;
+    color: #036b09;
+    font-weight: 700;
+    font-family: "Readex Pro", sans-serif;
 }
 
-.textoTarefas {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 390px;
-    max-width: 100%;
-    white-space:nowrap;
+/* CATEGORY */
+.work{
+    width: 50px;
+    height: 5px;
+    background-color: #00ff9d;
 }
 
-#janelaEdicao{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background: #d4d5d6;
-    border:  1px solid #2f2e2e;
-    width: 415px;
-    border-radius: 12px;
-    z-index: 200;
-    display: none;
+.school{
+    width: 50px;
+    height: 5px;
+    background-color: #c90505;
 }
 
-#janelaEdicao.abrir{
-    display: block !important;
+.lazer{
+    width: 50px;
+    height: 5px;
+    background-color: #e8ff16;
 }
 
-#janelaEdicaoFundo{
-    position: fixed;
-    top: 0;
-    background-color: #000;
-    bottom: 0;
-    left: 0;
-    opacity: 0.8;
-    z-index: 100;
-    right: 0;
-    display: none;
-}
-
-#janelaEdicaoFundo.abrir{
-    display: block !important;
-}
-
-#janelaEdicaoBtnFechar{
-    position: absolute;
-    top: -15px;
-    right: -12px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #2d2c2c;
-    outline: none;
-    cursor: pointer;
-}
-
-form{
-    width: 100%;
-    margin-top: 20px;
-}
-
-.frm-linha{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.frm-linha input{
-    padding: 15px;
-    border-radius: 12px;
-    outline: none;
-    border: 1px solid #fff;
-    font-size: 1.2rem;
-
-}
-
-.frm-linha button{
-    background:#0fff87;
-    border: 1px solid #00ff9d;
-    padding: 8px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 1rem;
-    height: 50px;
-    border-radius: 12px;
-    outline: none;
-}
-
-.frm-linha button:hover{
-    background: #0b9e55;
-}
-
-.finalizar{
-    text-transform: uppercase;
+.sport{
+    width: 50px;
+    height: 5px;
+    background-color: #0051ff;
 }
